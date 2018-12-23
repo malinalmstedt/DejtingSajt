@@ -1,0 +1,14 @@
+﻿@using DejtingSajt.Models
+@model UserIndexViewModel
+
+<table>
+        @foreach ( var User in Model.Users)
+        {
+            <tr>
+                <td>@User.Firstname</td>
+                <td>@User.Lastname</td>
+            </tr>
+        }
+</table>
+
+@Html.Partial("AddUserForm", new User())
