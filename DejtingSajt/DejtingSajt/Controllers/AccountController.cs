@@ -403,6 +403,11 @@ namespace DejtingSajt.Controllers
             return View();
         }
 
+
+        public ActionResult PersonalPagePartial()
+        {
+            return View();
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

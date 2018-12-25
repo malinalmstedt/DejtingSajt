@@ -83,4 +83,55 @@ namespace DejtingSajt.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
+
+    public class ChangeUsernameViewModel
+    {
+        [Required]
+        [Display(Name = "Befintligt användarnamn")]
+        public string OldUsername { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "Användarnamnet {0} måste vara {2} tecken långt", MinimumLength = 4)]
+        [Display(Name = "Nytt användarnamn")]
+        public string NewUsername { get; set; }
+
+        [Display(Name = "Bekräfta nytt användarnamn")]
+        [Compare("NewUsername", ErrorMessage = "Användarnamnet måste matcha!")]
+        public string ConfirmUsername { get; set; }
+    }
+
+    public class ChangeFirstnameViewMModel
+    {
+        [Required]
+        [Display(Name = "Befintligt förnamn")]
+        public string OldFirstname { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "Förnamnet {0} måste vara {2} tecken långt", MinimumLength = 4)]
+        [Display(Name = "Nytt förnamn")]
+        public string NewFirstname { get; set; }
+
+        [Display(Name = "Bekräfta nytt förnamn")]
+        [Compare("NewFirstname", ErrorMessage = "Förnamnen måste matcha!")]
+        public string ConfirmFirstname { get; set; }
+
+    }
+
+
+    public class ChangeLastnameViewModel
+    {
+
+        [Required]
+        [Display(Name = "Befintligt efternamn")]
+        public string OldLastname { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "Efternamnet {0} måste vara {2} tecken långt", MinimumLength = 4)]
+        [Display(Name = "Nytt efternamn")]
+        public string NewLastname { get; set; }
+
+        [Display(Name = "Bekräfta nytt efternamn")]
+        [Compare("NewLastname", ErrorMessage = "Efternamnen måste matcha!")]
+        public string ConfirmLastname { get; set; }
+    }
 }

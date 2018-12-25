@@ -86,6 +86,21 @@ namespace DejtingSajt
             }
             return manager;
         }
+
+        internal Task ChangeFistnameAsync(string v, string oldFirstname, string newFirstname)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal Task ChangeFirstnameAsync(string v, string oldFirstname, string newFirstname)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal Task ChangeFirstnamedAsync(string v, string oldFirstname, string newFirstname)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     // Configure the application sign-in manager which is used in this application.

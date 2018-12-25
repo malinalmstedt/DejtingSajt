@@ -244,6 +244,7 @@ namespace DejtingSajt.Controllers
             return View(model);
         }
 
+
         //
         // GET: /Manage/SetPassword
         public ActionResult SetPassword()

@@ -1,4 +1,5 @@
 ﻿@model DejtingSajt.Models.IndexViewModel
+
 @{
     ViewBag.Title = "Manage";
 }
@@ -11,8 +12,13 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>Förnamn:</dt>
+
+
+
         <dd>
-            
+            [
+            @Html.ActionLink("Ändra ditt förnamn", "ChangeFirstname")
+            ]
         </dd>
         <dt>Efternamn:</dt>
         <dd>
@@ -20,8 +26,19 @@
         </dd>
         <dt>Användarnamn:</dt>
         <dd>
+        <dt>Bild:</dt>
+        <dd>
+
+        <dt>Ålder:</dt>
+        <dd>
 
         </dd>
+
+        <dt>Kön:</dt>
+        <dd>
+
+        <dt>:</dt>
+        <dd>
         <dt>Password:</dt>
         <dd>
             [
@@ -99,6 +116,6 @@
                 </text>
             }
         }*@
-        </dd>
+
     </dl>
 </div>

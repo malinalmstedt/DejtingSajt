@@ -66,24 +66,39 @@ namespace DejtingSajt.Models
     {
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 2)]
-        [Display(Name = "Firstname")]
+        [DisplayAttribute(Name = "Firstname")]
         public string Firstname { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 2)]
-        [Display(Name = "Lastname")]
+        [DisplayAttribute(Name = "Lastname")]
         public string Lastname{ get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 4)]
-        [Display(Name = "Username")]
+        [DisplayAttribute(Name = "Username")]
         public string Username { get; set; }
 
+
+        [Required]
+        [DisplayAttribute(Name = "Ålder")]
+        public string Age { get; set; }
+
+        [Required]
+        [DisplayAttribute(Name = "Kön")]
+        public string Gender{ get; set; }
+
+        [Required]
+        [DisplayAttribute(Name = "Ort")]
+        public string City { get; set; }
+
+        [DisplayAttribute(Name = "Beskrivning")]
+        public string Description { get; set; }
 
 
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [DisplayAttribute(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
