@@ -83,6 +83,7 @@ namespace DejtingSajt.Models
 
 
         [Required]
+        [Range(18,100)]
         [DisplayAttribute(Name = "Ålder")]
         public string Age { get; set; }
 
