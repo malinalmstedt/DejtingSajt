@@ -68,34 +68,34 @@ namespace DejtingSajt.Models
     {
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 2)]
-        [DisplayAttribute(Name = "Firstname")]
+        [Display(Name = "Firstname")]
         public string Firstname { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 2)]
-        [DisplayAttribute(Name = "Lastname")]
+        [Display(Name = "Lastname")]
         public string Lastname{ get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 4)]
-        [DisplayAttribute(Name = "Username")]
+        [Display(Name = "Username")]
         public string Username { get; set; }
 
 
         [Required]
         [Range(18,150)]
-        [DisplayAttribute(Name = "Ålder")]
+        [Display(Name = "Ålder")]
         public string Age { get; set; }
 
         [Required]
-        [DisplayAttribute(Name = "Kön")]
+        [Display(Name = "Kön")]
         public string Gender{ get; set; }
 
         [Required]
-        [DisplayAttribute(Name = "Ort")]
+        [Display(Name = "Ort")]
         public string City { get; set; }
 
-        [DisplayAttribute(Name = "Beskrivning")]
+        [Display(Name = "Beskrivning")]
         public string Description { get; set; }
 
         //[Display(Name = "UserPhoto")]
@@ -104,7 +104,7 @@ namespace DejtingSajt.Models
 
         [Required]
         [EmailAddress]
-        [DisplayAttribute(Name = "Email")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
 
