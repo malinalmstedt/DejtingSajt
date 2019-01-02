@@ -146,28 +146,38 @@ namespace DejtingSajt.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(/*[Bind(Exclude = "UserPhoto")]*/RegisterViewModel model)
+        public async Task<ActionResult> Register([Bind(Exclude = "UserPhoto")]RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    Firstname = model.Firstname,
+                    Lastname = model.Lastname,
+                    Age = model.Age,
+                    Gender = model.Gender,
+                    City = model.City,
+                    Description = model.Description
+                };
 
-                // To convert the user uploaded Photo as Byte Array before save to DB    
-                //byte[] imageData = null;
-                //if (Request.Files.Count > 0)
-                //{
-                //    HttpPostedFileBase poImgFile = Request.Files["UserPhoto"];
-
-                //    using (var binary = new BinaryReader(poImgFile.InputStream))
-                //    {
-                //        imageData = binary.ReadBytes(poImgFile.ContentLength);
-                //    }
-                //}
 
 
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                byte[] imageData = null;
+                if (Request.Files.Count > 0)
+                {
+                    HttpPostedFileBase poImgFile = Request.Files["UserPhoto"];
 
-                //Here we pass the byte array to user context to store in db    
-                //user.UserPhoto = imageData;
+                    using (var binary = new BinaryReader(poImgFile.InputStream))
+                    {
+                        imageData = binary.ReadBytes(poImgFile.ContentLength);
+                    }
+                }
+
+                user.UserPhoto = imageData;
+
+            
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

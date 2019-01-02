@@ -78,8 +78,8 @@ namespace DejtingSajt.Models
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 4)]
-        [Display(Name = "Username")]
-        public string Username { get; set; }
+        [Display(Name = "CustomUsername")]
+        public string CustomUsername { get; set; }
 
 
         [Required]
@@ -98,8 +98,8 @@ namespace DejtingSajt.Models
         [Display(Name = "Beskrivning")]
         public string Description { get; set; }
 
-        //[Display(Name = "UserPhoto")]
-        //public byte[] UserPhoto { get; set; }
+        [Display(Name = "UserPhoto")]
+        public byte[] UserPhoto { get; set; }
 
 
         [Required]
