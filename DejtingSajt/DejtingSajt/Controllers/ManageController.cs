@@ -220,6 +220,12 @@ namespace DejtingSajt.Controllers
             return View();
         }
 
+
+        public ActionResult ChangeFirstname()
+        {
+            return View();
+        }
+
         //
         // POST: /Manage/ChangePassword
         [HttpPost]

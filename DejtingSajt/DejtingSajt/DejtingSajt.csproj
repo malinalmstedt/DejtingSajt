@@ -274,7 +274,6 @@
     <Content Include="Views\Manage\ChangeLastname.cshtml" />
     <Content Include="Views\Manage\ChangeUsername.cshtml" />
     <Content Include="Views\Account\PersonalPagePartial.cshtml" />
-    <Content Include="Views\Account\PersonalPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
